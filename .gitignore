@@ -1,0 +1,12 @@
+# ide
+.idea/
+.vscode/
+
+# misc
+.DS_store
+
+# files
+.env
+
+# python
+*.pyc
