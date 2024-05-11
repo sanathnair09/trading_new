@@ -1,2 +1,3 @@
 selenium=4.20.0
 undetectable_chromedriver=3.5.5
+pytest=8.2.0
