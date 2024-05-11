@@ -10,3 +10,4 @@
 
 # python
 *.pyc
+.pytest_cache/
