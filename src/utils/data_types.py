@@ -2,6 +2,14 @@ from dataclasses import dataclass
 from enum import Enum
 
 
+class BrokerNames(Enum):
+    RH = "RH"  # Robinhood
+    E2 = "E2"  # ETrade
+    SB = "SB"  # Schwab
+    FD = "FD"  # Fidelity
+    IF = "IF"  # IBKR free
+    VD = "VD"  # Vanguard
+
 class OrderType(Enum):
     MARKET = "Market"
     LIMIT = "Limit"
