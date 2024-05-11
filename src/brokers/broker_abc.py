@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from pathlib import Path
 
-from utils.data_types import OptionOrder, StockOrder
+from src.utils.data_types import OptionOrder, StockOrder
 
 OrderResult = str | dict | None
 
