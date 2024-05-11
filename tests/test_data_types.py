@@ -1,4 +1,4 @@
-from src.utils.data_types import OrderType, StockOrder
+from src.utils.data_types import OptionOrder, OptionType, OrderType, StockOrder
 
 
 class TestDataTypes:
@@ -18,3 +18,15 @@ class TestDataTypes:
         assert order2.quantity == 100
         assert order2.order_type == OrderType.LIMIT
         assert order2.price == 150.0
+    
+    def test_option_type(self):
+        assert OptionType.CALL.value == "Call"
+        assert OptionType.PUT.value == "Put"
+
+    def test_option_order(self):
+        order = OptionOrder("AAPL", "2021-01-01", OptionType.CALL, 150.0, OrderType.MARKET)
+        assert order.sym == "AAPL"
+        assert order.expiration == "2021-01-01"
+        assert order.option_type == OptionType.CALL
+        assert order.strike == 150.0
+        assert order.order_type == OrderType.MARKET
